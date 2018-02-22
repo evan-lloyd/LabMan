@@ -1,0 +1,46 @@
+material SSS_skinshader
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			ambient 0.500000 0.500000 0.500000 0.000000
+			diffuse 0.930000 0.930000 0.930000 0.000000
+			emissive 0.000000 0.000000 0.000000 0.000000
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture texture.tif
+				tex_address_mode wrap
+				filtering none
+				colour_op modulate
+			}
+		}
+		pass
+		{
+			ambient 0.0 0.0 0.0
+			diffuse 0.0 0.0 0.0
+			specular 0.000000 0.000000 0.000000 0.000000 2.500000
+			scene_blend add
+			depth_write off
+		}
+	}
+}
+material Invisio
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			ambient 0.500000 0.500000 0.500000 0.000000
+			diffuse 0.800000 0.800000 0.800000 0.000000
+			specular 0.615208 0.615208 0.615208 0.000000 42.000000
+			emissive 0.000000 0.000000 0.000000 0.000000
+			scene_blend alpha_blend
+			depth_write off
+		}
+	}
+}

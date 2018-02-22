@@ -1,0 +1,9 @@
+<physicsobject name = "ball">
+	<displaymesh id = "0" mesh = "tennisball.mesh" scale = "1 1 1"/>
+	<part id = "0" name = "ball">
+		<body id = "0" type = "rigid" mass = "0.057" restitution="0.9" linear_damping="0.02">
+			<shape type = "sphere" radius = ".343"/>
+			<meshattachment meshid = "0"/>
+		</body>
+	</part>
+</physicsobject>

@@ -1,0 +1,514 @@
+<physicsobject name = "LabMan">
+	<displaymesh id = "0" controlled = "1" mesh = "labman.mesh"/>
+	<collisionmesh id = "0" mesh = "labmancol.mesh"/>
+	<collisionmesh id = "1" mesh = "labmancolrighthand.mesh"/>
+	<collisionmesh id = "2" mesh = "labmancollefthand.mesh"/>
+	<constraint type = "joint" body_1 = "LowerBack;0" body_2 = "UpperBack;0">
+		<limits min_angles = "-.262 -.262 -.262" max_angles = ".262 .262 .262"/>
+		<jointframe_1 offset = "0 2.52 -0.64" rotation = "0 0 0"/>
+		<jointframe_2 offset = "0 2.52 -0.64" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "LowerBack;0" body_2 = "Thigh.r;0">
+		<limits min_angles = "-.611 -.349 -0.349" max_angles = "2 .785 0.349"/>
+		<jointframe_1 offset = "-0.73 0.05 0" rotation = "0 0 0"/>
+		<jointframe_2 offset = "-0.73 0.05 0" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "LowerBack;0" body_2 = "Thigh.l;0">
+		<limits min_angles = "-.611 -.785 -0.349" max_angles = "2 0.349 0.349"/>
+		<jointframe_1 offset = "0.73 0.05 0" rotation = "0 0 0"/>
+		<jointframe_2 offset = "0.73 0.05 0" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "UpperBack;0" body_2 = "Shoulder.r;0">
+		<limits min_angles = "-.1 -.1 -.1" max_angles = ".1 0.1 0.1"/>
+		<jointframe_1 offset = "-0.1 4.71 0.12" rotation = "0 0 0"/>
+		<jointframe_2 offset = "-0.1 4.71 0.12" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "UpperBack;0" body_2 = "Shoulder.l;0">
+		<limits min_angles = "-.1 -.1 -.1" max_angles = ".1 0.1 0.1"/>
+		<jointframe_1 offset = "0.1 4.71 0.12" rotation = "0 0 0"/>
+		<jointframe_2 offset = "0.1 4.71 0.12" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "Shoulder.r;0" body_2 = "UpperArm.r;0">
+		<limits min_angles = "-.262 -1.262 -1.262 " max_angles = ".262 .432 1.262"/>
+		<jointframe_1 offset = "-1.39 4.67 -0.42" rotation = "0 0 0"/>
+		<jointframe_2 offset = "-1.39 4.67 -0.42" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "Shoulder.l;0" body_2 = "UpperArm.l;0">
+		<limits min_angles = "-.262 0 -1.262" max_angles = ".262 1.262 1.262"/>
+		<jointframe_1 offset = "1.39 4.67 -0.42" rotation = "0 0 0"/>
+		<jointframe_2 offset = "1.39 4.67 -0.42" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "UpperArm.r;0" body_2 = "LowerArm.r;0">
+		<limits min_angles = "-.262 -2.53 0" max_angles = ".262 0 0"/>
+		<jointframe_1 offset = "-3.5 4.51 -0.54" rotation = "0 0 0"/>
+		<jointframe_2 offset = "-3.5 4.51 -0.54" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "UpperArm.l;0" body_2 = "LowerArm.l;0">
+		<limits min_angles = "-.262 0 0" max_angles = ".262 2.53 0"/>
+		<jointframe_1 offset = "3.5 4.51 -0.54" rotation = "0 0 0"/>
+		<jointframe_2 offset = "3.5 4.51 -0.54" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "LowerArm.r;0" body_2 = "Wrist.r;0">
+		<limits min_angles = "0 -.349 -1.047" max_angles = "0 .349 .349"/>
+		<jointframe_1 offset = "-5.78 4.61 -0.41" rotation = "0 0 0"/>
+		<jointframe_2 offset = "-5.78 4.61 -0.41" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.r;0" body_2 = "ThumbMeta.r;0">
+		<limits min_angles = "-.1 -1.047 -.2" max_angles = ".1 0 0.2"/>
+		<jointframe_1 offset = "-6.05 4.56 -0.14" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "ThumbMeta.r;0" body_2 = "ThumbInter.r;0">
+		<limits min_angles = "0 -1.047 0" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-6.33 4.56 0.12" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "ThumbInter.r;0" body_2 = "ThumbDistal.r;0">
+		<limits min_angles = "0 0 0" max_angles = "0 1.57 0"/>
+		<jointframe_1 offset = "-6.56 4.56 0.19" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.r;0" body_2 = "IndexMeta.r;0">
+		<limits min_angles = "0 -.175 -.349" max_angles = "0 .175 0"/>
+		<jointframe_1 offset = "-6.59 4.94 -0.14" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "IndexMeta.r;0" body_2 = "IndexInter.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-6.95 4.94 -0.10" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "IndexInter.r;0" body_2 = "IndexDistal.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-7.20 4.94 -0.08" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.r;0" body_2 = "MiddleMeta.r;0">
+		<limits min_angles = "0 -.175 -.349" max_angles = "0 .175 0"/>
+		<jointframe_1 offset = "-6.62 4.94 -0.30" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "MiddleMeta.r;0" body_2 = "MiddleInter.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-6.97 4.94 -0.31" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "MiddleInter.r;0" body_2 = "MiddleDistal.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-7.24 4.94 -0.31" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.r;0" body_2 = "RingMeta.r;0">
+		<limits min_angles = "0 -.175 -.349" max_angles = "0 .175 0"/>
+		<jointframe_1 offset = "-6.57 4.94 -0.49" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "RingMeta.r;0" body_2 = "RingInter.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-6.94 4.94 -0.50" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "RingInter.r;0" body_2 = "RingDistal.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-7.19 4.94 -0.51" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.r;0" body_2 = "PinkyMeta.r;0">
+		<limits min_angles = "0 -.175 -.349" max_angles = "0 .175 0"/>
+		<jointframe_1 offset = "-6.55 4.94 -0.66" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "PinkyMeta.r;0" body_2 = "PinkyInter.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-6.83 4.94 -0.68" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "PinkyInter.r;0" body_2 = "PinkyDistal.r;0">
+		<limits min_angles = "0 0 -1.55" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "-7.06 4.94 -0.69" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "LowerArm.l;0" body_2 = "Wrist.l;0">
+		<limits min_angles = "0 -.349 -.349" max_angles = "0 .349 1.047"/>
+		<jointframe_1 offset = "5.78 4.61 -0.41" rotation = "0 0 0"/>
+		<jointframe_2 offset = "5.78 4.61 -0.41" rotation = "0 0 0"/>
+	</constraint>
+		
+	<constraint type = "joint" body_1 = "Wrist.l;0" body_2 = "ThumbMeta.l;0">
+		<limits min_angles = "-0.1 0 -.2" max_angles = "0.1 1.047 0.32"/>
+		<jointframe_1 offset = "6.05 4.56 -0.14" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "ThumbMeta.l;0" body_2 = "ThumbInter.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 1.047 0"/>
+		<jointframe_1 offset = "6.33 4.56 0.12" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "ThumbInter.l;0" body_2 = "ThumbDistal.l;0">
+		<limits min_angles = "0 -1.57 0" max_angles = "0 0 0"/>
+		<jointframe_1 offset = "6.56 4.56 0.19" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.l;0" body_2 = "IndexMeta.l;0">
+		<limits min_angles = "0 -.175 0" max_angles = "0 .175 .349"/>
+		<jointframe_1 offset = "6.59 4.94 -0.14" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "IndexMeta.l;0" body_2 = "IndexInter.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "6.95 4.94 -0.10" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "IndexInter.l;0" body_2 = "IndexDistal.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "7.20 4.94 -0.08" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.l;0" body_2 = "MiddleMeta.l;0">
+		<limits min_angles = "0 -.175 0" max_angles = "0 .175 .349"/>
+		<jointframe_1 offset = "6.62 4.94 -0.30" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "MiddleMeta.l;0" body_2 = "MiddleInter.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "6.97 4.94 -0.31" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "MiddleInter.l;0" body_2 = "MiddleDistal.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "7.24 4.94 -0.31" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.l;0" body_2 = "RingMeta.l;0">
+		<limits min_angles = "0 -.175 0" max_angles = "0 .175 .349"/>
+		<jointframe_1 offset = "6.57 4.94 -0.49" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "RingMeta.l;0" body_2 = "RingInter.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "6.94 4.94 -0.50" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "RingInter.l;0" body_2 = "RingDistal.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "7.19 4.94 -0.51" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Wrist.l;0" body_2 = "PinkyMeta.l;0">
+		<limits min_angles = "0 -.175 0" max_angles = "0 .175 .349"/>
+		<jointframe_1 offset = "6.55 4.94 -0.66" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "PinkyMeta.l;0" body_2 = "PinkyInter.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "6.83 4.94 -0.68" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "PinkyInter.l;0" body_2 = "PinkyDistal.l;0">
+		<limits min_angles = "0 0 0" max_angles = "0 0 1.55"/>
+		<jointframe_1 offset = "7.06 4.94 -0.69" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Thigh.r;0" body_2 = "Calf.r;0">
+		<limits min_angles = "-1.68 0 -.524" max_angles = "0 0 .524"/>
+		<jointframe_1 offset = "-0.93 -3.98 -0.32" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "Thigh.l;0" body_2 = "Calf.l;0">
+		<limits min_angles = "-1.68 0 -.524" max_angles = "0 0 .524"/>
+		<jointframe_1 offset = "0.93 -3.98 -0.32" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "Calf.r;0" body_2 = "Ankle.r;0">
+		<limits min_angles = "-.115 0 -.524" max_angles = "0 0 .524"/>
+		<jointframe_1 offset = "-0.75 -7.48 -0.62" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "Calf.l;0" body_2 = "Ankle.l;0">
+		<limits min_angles = "-.115 0 -.524" max_angles = "0 0 .524"/>
+		<jointframe_1 offset = "0.75 -7.48 -0.62" rotation = "0 0 0"/>
+	</constraint>
+	
+	<constraint type = "joint" body_1 = "UpperBack;0" body_2 = "Neck;0">
+		<limits min_angles = "0 -.785 -.262" max_angles = "0 .785 .262"/>
+		<jointframe_1 offset = "0 5.45 -0.38" rotation = "0 0 0"/>
+	</constraint>
+	<constraint type = "joint" body_1 = "Neck;0" body_2 = "Head;0">
+		<limits min_angles = "-.362 -.785 -.262" max_angles = ".362 .785 .262"/>
+		<jointframe_1 offset = "0 6.54 -0.30" rotation = "0 0 0"/>
+	</constraint>
+	
+	
+	<part id="0" name="LowerBack" offset = "0 1.74 0">
+	  <body id="0" type="rigid" mass="14.2">
+		<meshattachment meshid="0" bone="LowerBack"/>
+		<shape type = "mesh" meshid = "0" submesh = "LowerBack"/>
+	  </body>
+	</part>
+	<part id="1" name="UpperBack" offset = "0 3.62 0">
+	  <body id="0" type="rigid" mass="24.9" parent = "0;0" noncollision_group = "1">
+		<meshattachment meshid="0" bone="UpperBack"/>
+		<shape type = "mesh" meshid = "0" submesh = "UpperBack"/>
+	  </body>
+	</part>
+	<part id="2" name="Thigh.l" offset = "0.81 -1.44 0">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "80000" controller_torque_scale = "4000">
+		<meshattachment meshid="0" bone="Thigh.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "Thigh.l"/>
+	  </body>
+	</part>
+	<part id="3" name="Thigh.r" offset = "-0.81 -1.44 0">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "80000" controller_torque_scale = "4000">
+		<meshattachment meshid="0" bone="Thigh.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "Thigh.r"/>
+	  </body>
+	</part>
+	<part id="4" name="Shoulder.r" offset = "-0.96 4.85 0">
+	  <body id="0" type="rigid" mass="0.5" parent = "0;0" max_controller_torque = "4000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="Shoulder.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "Shoulder.r"/>
+	  </body>
+	</part>
+	<part id="5" name="Shoulder.l" offset = "0.96 4.85 0">
+	  <body id="0" type="rigid" mass="0.5" parent = "0;0" max_controller_torque = "4000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="Shoulder.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "Shoulder.l"/>
+	  </body>
+	</part>
+	<part id="6" name="UpperArm.r" offset = "-2.6 4.62 -0.5">
+	  <body id="0" type="rigid" mass="1.5" parent = "0;0" max_controller_torque = "20000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="UpperArm.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "UpperArm.r"/>
+	  </body>
+	</part>
+	<part id="7" name="UpperArm.l" offset = "2.6 4.62 -0.5">
+	  <body id="0" type="rigid" mass="1.5" parent = "0;0" max_controller_torque = "20000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="UpperArm.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "UpperArm.l"/>
+	  </body>
+	</part>
+	<part id="8" name="LowerArm.r" offset = "-4.43 4.57 -0.48">
+	  <body id="0" type="rigid" mass="1.4" parent = "0;0" max_controller_torque = "20000" controller_torque_scale = "30">
+		<meshattachment meshid="0" bone="LowerArm.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "LowerArm.r"/>
+	  </body>
+	</part>
+	<part id="9" name="LowerArm.l" offset = "4.43 4.57 -0.48">
+	  <body id="0" type="rigid" mass="1.4" parent = "0;0" max_controller_torque = "10000" controller_torque_scale = "30">
+		<meshattachment meshid="0" bone="LowerArm.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "LowerArm.l"/>
+	  </body>
+	</part>
+	<part id="10" name="Wrist.r" offset = "-6.56 4.84 -0.35">
+	  <body id="0" type="rigid" mass=".25" parent = "0;0" max_controller_torque = "200" controller_torque_scale = "30" noncollision_group = "2">
+		<meshattachment meshid="0" bone="Wrist.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "Wrist.r"/>
+	  </body>
+	</part>
+	
+	<part id="11" name="ThumbMeta.r" offset = "-6.21 4.64 0.06">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="ThumbMeta.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "ThumbMeta.r"/>
+	  </body>
+	</part>
+	<part id="12" name="ThumbInter.r" offset = "-6.44 4.57 0.19">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="ThumbInter.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "ThumbInter.r"/>
+	  </body>
+	</part>
+	<part id="13" name="ThumbDistal.r" offset = "-6.66 4.57 0.23">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="ThumbDistal.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "ThumbDistal.r"/>
+	  </body>
+	</part>
+	<part id="14" name="IndexMeta.r" offset = "-6.66 4.91 -0.11">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="IndexMeta.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "IndexMeta.r"/>
+	  </body>
+	</part>
+	<part id="15" name="IndexInter.r" offset = "-7.03 4.89 -0.11">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="IndexInter.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "IndexInter.r"/>
+	  </body>
+	</part>
+	<part id="16" name="IndexDistal.r" offset = "-7.31 4.90 -0.11">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="IndexDistal.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "IndexDistal.r"/>
+	  </body>
+	</part>
+	<part id="17" name="MiddleMeta.r" offset = "-6.74 4.92 -0.30">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="MiddleMeta.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "MiddleMeta.r"/>
+	  </body>
+	</part>
+	<part id="18" name="MiddleInter.r" offset = "-7.04 4.92 -0.31">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="MiddleInter.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "MiddleInter.r"/>
+	  </body>
+	</part>
+	<part id="19" name="MiddleDistal.r" offset = "-7.30 4.92 -0.31">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="MiddleDistal.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "MiddleDistal.r"/>
+	  </body>
+	</part>
+	<part id="20" name="RingMeta.r" offset = "-6.73 4.92 -0.49">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="RingMeta.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "RingMeta.r"/>
+	  </body>
+	</part>
+	<part id="21" name="RingInter.r" offset = "-7.03 4.92 -0.50">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="RingInter.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "RingInter.r"/>
+	  </body>
+	</part>
+	<part id="22" name="RingDistal.r" offset = "-7.28 4.92 -0.51">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="RingDistal.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "RingDistal.r"/>
+	  </body>
+	</part>
+	<part id="23" name="PinkyMeta.r" offset = "-6.69 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="PinkyMeta.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "PinkyMeta.r"/>
+	  </body>
+	</part>
+	<part id="24" name="PinkyInter.r" offset = "-6.97 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="PinkyInter.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "PinkyInter.r"/>
+	  </body>
+	</part>
+	<part id="25" name="PinkyDistal.r" offset = "-7.17 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" controller_torque_scale = "1" noncollision_group = "2">
+		<meshattachment meshid="0" bone="PinkyDistal.r"/>
+		<shape type = "mesh" meshid = "1" submesh = "PinkyDistal.r"/>
+	  </body>
+	</part>
+	
+	<part id="26" name="Wrist.l" offset = "6.25 4.69 -0.35">
+	  <body id="0" type="rigid" mass=".25" parent = "0;0"  max_controller_torque = "200" noncollision_group = "3">
+		<meshattachment meshid="0" bone="Wrist.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "Wrist.l"/>
+	  </body>
+	</part>
+	
+	<part id="27" name="ThumbMeta.l" offset = "6.21 4.64 0.06">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="ThumbMeta.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "ThumbMeta.l"/>
+	  </body>
+	</part>
+	<part id="28" name="ThumbInter.l" offset = "6.44 4.57 0.19">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="ThumbInter.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "ThumbInter.l"/>
+	  </body>
+	</part>
+	<part id="29" name="ThumbDistal.l" offset = "6.66 4.57 0.23">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="ThumbDistal.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "ThumbDistal.l"/>
+	  </body>
+	</part>
+	<part id="30" name="IndexMeta.l" offset = "6.66 4.91 -0.11">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="IndexMeta.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "IndexMeta.l"/>
+	  </body>
+	</part>
+	<part id="31" name="IndexInter.l" offset = "7.03 4.89 -0.11">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="IndexInter.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "IndexInter.l"/>
+	  </body>
+	</part>
+	<part id="32" name="IndexDistal.l" offset = "7.31 4.90 -0.11">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="IndexDistal.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "IndexDistal.l"/>
+	  </body>
+	</part>
+	<part id="33" name="MiddleMeta.l" offset = "6.74 4.92 -0.30">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="MiddleMeta.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "MiddleMeta.l"/>
+	  </body>
+	</part>
+	<part id="34" name="MiddleInter.l" offset = "7.04 4.92 -0.31">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="MiddleInter.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "MiddleInter.l"/>
+	  </body>
+	</part>
+	<part id="35" name="MiddleDistal.l" offset = "7.30 4.92 -0.31">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="MiddleDistal.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "MiddleDistal.l"/>
+	  </body>
+	</part>
+	<part id="36" name="RingMeta.l" offset = "6.73 4.92 -0.49">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="RingMeta.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "RingMeta.l"/>
+	  </body>
+	</part>
+	<part id="37" name="RingInter.l" offset = "7.03 4.92 -0.50">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="RingInter.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "RingInter.l"/>
+	  </body>
+	</part>
+	<part id="38" name="RingDistal.l" offset = "7.28 4.92 -0.51">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="RingDistal.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "RingDistal.l"/>
+	  </body>
+	</part>
+	<part id="39" name="PinkyMeta.l" offset = "6.69 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".03" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="PinkyMeta.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "PinkyMeta.l"/>
+	  </body>
+	</part>
+	<part id="40" name="PinkyInter.l" offset = "6.97 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="PinkyInter.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "PinkyInter.l"/>
+	  </body>
+	</part>
+	<part id="41" name="PinkyDistal.l" offset = "7.17 4.92 -0.68">
+	  <body id="0" type="rigid" mass=".01" parent = "0;0" max_controller_torque = "30" noncollision_group = "3">
+		<meshattachment meshid="0" bone="PinkyDistal.l"/>
+		<shape type = "mesh" meshid = "2" submesh = "PinkyDistal.l"/>
+	  </body>
+	</part>
+	<part id="42" name="Neck" offset = "-0.006 5.423 -0.120">
+	  <body id="0" type="rigid" mass="1.1" parent = "0;0" max_controller_torque = "6000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="Neck"/>
+		<shape type = "mesh" meshid = "0" submesh = "Neck"/>
+	  </body>
+	</part>
+	<part id="43" name="Head" offset = "-0.020 6.680 0.494">
+	  <body id="0" type="rigid" mass="4.2" parent = "0;0" max_controller_torque = "6000" controller_torque_scale = "30" noncollision_group = "1">
+		<meshattachment meshid="0" bone="Head"/>
+		<shape type = "mesh" meshid = "0" submesh = "Head"/>
+	  </body>
+	</part>
+	<part id="44" name="Calf.r" offset = "-0.858 -5.173 -0.412">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "80000" controller_torque_scale = "300">
+		<meshattachment meshid="0" bone="Calf.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "Calf.r"/>
+	  </body>
+	</part>
+	<part id="45" name="Calf.l" offset = "0.803 -5.353 -0.490">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "80000" controller_torque_scale = "300">
+		<meshattachment meshid="0" bone="Calf.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "Calf.l"/>
+	  </body>
+	</part>
+	<part id="46" name="Ankle.r" offset = "-0.882 -7.978 0.679">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "40" controller_torque_scale = "30">
+		<meshattachment meshid="0" bone="Ankle.r"/>
+		<shape type = "mesh" meshid = "0" submesh = "Foot.r"/>
+	  </body>
+	</part>
+	<part id="47" name="Ankle.l" offset = "0.881 -7.976 0.675">
+	  <body id="0" type="rigid" mass="0" parent = "0;0" max_controller_torque = "40" controller_torque_scale = "30">
+		<meshattachment meshid="0" bone="Ankle.l"/>
+		<shape type = "mesh" meshid = "0" submesh = "Foot.l"/>
+	  </body>
+	</part>
+	
+	
+</physicsobject>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/OpenTissue/!svn/ver/4800/sandbox/OpenTissue/core/math/optimization/non_smooth_newton
+END
+optimization_compute_partitioned_jacobian.h
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/OpenTissue/!svn/ver/4800/sandbox/OpenTissue/core/math/optimization/non_smooth_newton/optimization_compute_partitioned_jacobian.h
+END
+optimization_compute_inverse_D.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/OpenTissue/!svn/ver/4800/sandbox/OpenTissue/core/math/optimization/non_smooth_newton/optimization_compute_inverse_D.h
+END
+optimization_compute_jacobian.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/OpenTissue/!svn/ver/4800/sandbox/OpenTissue/core/math/optimization/non_smooth_newton/optimization_compute_jacobian.h
+END

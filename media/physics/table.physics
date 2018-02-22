@@ -1,0 +1,10 @@
+<physicsobject name = "table">
+	<displaymesh id = "0" mesh = "table.mesh" scale = "1 1 1"/>
+	<collisionmesh id = "0" mesh = "table.mesh"/>
+	<part id = "0" name = "table">
+		<body id = "0" type = "rigid" mass = "0" restitution = "0.6">
+			<shape type = "mesh" meshid = "0"/>
+			<meshattachment meshid = "0"/>
+		</body>
+	</part>
+</physicsobject>
