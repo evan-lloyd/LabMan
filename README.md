@@ -10,17 +10,13 @@ Free for academic use. All other rights are reserved by the author.
 
 ## Notes/warnings
 Some code may work improperly as I recently had to restore it from an incomplete and not fully-recent backup,
-and there are a few visual bugs with the labman model as I also lost the most recent version of that. Also,
-be warned that some of the code is truly horrendous. Don't try to import your own models; setting them
-up requires a complicated series of steps that I have not been able to duplicate yet, let alone document.
+and there are a few visual bugs with the labman model as I also lost the most recent version of that. 
 While the CMake system in theory should allow compilation on any platform, I have only tested it on Windows
 using Visual Studio 2008.
 
 ## Code structure
 The LabManApp class demonstrates a simple application utilizing the motion controller hierarchy to reach
-for a tennis ball. I recommend starting there to see how the different parts fit together.
-Don't even try to comprehend the physics resource system (PhysicsSceneManager directory); let's just say
-that it's confusing and poorly written (and mostly deals with Ogre trivialities). Focus on what is going on in the MotionController directory.
+for a tennis ball. I recommend starting there to see how the different parts fit together. Focus on what is going on in the MotionController directory.
 The top level of the controller hierarchy is handled by the MotionPlan class, which concatenates multiple
 trajectories. The mid-level controller (Motion class) determines when to advance to each pose.
 Finally, the low-level PID controller is implemented in the PoseController class.
